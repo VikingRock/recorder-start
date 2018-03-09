@@ -1,9 +1,3 @@
-.pagination-border(@padding-top, @padding-side, @padding-bottom) {
-  padding: @padding-top @padding-side @padding-bottom;
-  border-top: 2px solid @bg-color-grey;
-  border-bottom: 2px solid @bg-color-grey;
-}
-
 .link-style() {
   text-decoration: none;
   display: block;
@@ -22,27 +16,6 @@
   &:active {
     background-color: @bg-color-blue--darkest;
     color: @text-color--blue;
-  }
-}
-
-.poster-bkg(@x, @y, @bg-size-triangle, @bg-size, @padding-top, @padding-bottom) {
-  background:
-    url("../img/intro-triangle.svg") 50% 100% no-repeat,
-    @bg-color-blue--light url("../img/photo-background@1x.jpg") @x @y no-repeat;
-  background-size:
-    @bg-size-triangle,
-    @bg-size;
-  padding-top: @padding-top;
-  padding-bottom: @padding-bottom;
-
-  @media (min-resolution: 144dpi),
-  (min-resolution: 1.5dppx) {
-    background:
-      url("../img/intro-triangle.svg") 50% 100% no-repeat,
-      @bg-color-blue--light url("../img/photo-background@2x.jpg") @x @y no-repeat;
-    background-size:
-      @bg-size-triangle,
-      @bg-size;
   }
 }
 
