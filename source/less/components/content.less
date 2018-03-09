@@ -1,0 +1,30 @@
+.page-main {
+  flex-basis: 66.66%;
+  padding:  40px;
+}
+
+.content {
+  display: flex;
+}
+
+.product-name {
+  font-weight: @font-weight--product;
+}
+
+.page-header h1 {
+  font-size: @font-size--h1;
+  font-weight: @font-weight;
+  padding-bottom: 30px;
+
+  &::before {
+    display: inline-block;
+    vertical-align: middle;
+    content: "";
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    background-size: 40px;
+    background-repeat: no-repeat;
+    background-image: url('../img/wf-logo.png');
+  }
+}
