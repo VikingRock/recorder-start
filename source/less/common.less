@@ -12,3 +12,36 @@ html {
   display: flex;
   flex-direction: row;
 }
+
+h2.section {
+  color: @color--h2;
+  font-size: @font-size--h2;
+  font-weight: @font-weight;
+
+  &.section--icon::before {
+    display: inline-block;
+    vertical-align: middle;
+    content: "";
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    background-size: 30px;
+    background-repeat: no-repeat;
+  }
+
+  &.section--video::before {
+    background-image: url('../img/section-video.png');
+  }
+
+  &.section--examples::before {
+    background-image: url('../img/section-examples.png');
+  }
+
+  &.section--news::before {
+    background-image: url('../img/section-news.png');
+  }
+
+  &.section--help::before {
+    background-image: url('../img/section-help.png');
+  }
+}
