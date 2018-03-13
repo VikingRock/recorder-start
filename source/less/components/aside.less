@@ -1,7 +1,27 @@
 .help-n-news {
-  flex-basis: 33.33%;
+  flex-basis: 32%;
   padding: 25px 30px;
-  background-color: #eff2fb;
+  background-color: @color--eclipse;
+
+  .help-links ul {
+    list-style: none;
+    padding-left: 0;
+
+    li {
+      line-height: 1.8;
+      font-weight: bold;
+    }
+
+    a {
+      text-decoration: none;
+      color:  @text-color;
+    }
+  }
+}
+
+.rpax-news  {
+  max-height: 400px;
+  overflow-y: scroll;
 }
 
 .news-item {
@@ -12,5 +32,9 @@
   &__link {
     text-decoration: none;
     color: @text-color;
+  }
+
+  &__description {
+    color: @text-color--alternate;
   }
 }

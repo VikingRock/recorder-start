@@ -4,7 +4,6 @@
   justify-content: space-between;
   flex-direction: column;
 
-
   .icon::before {
     display: inline-block;
     vertical-align: middle;
@@ -16,8 +15,12 @@
     background-repeat: no-repeat;
   }
 
-  .recordings__new::before {
-    background-image: url('../../img/recording-new.png');
+  .recordings__new {
+    padding-bottom: 20px;
+
+    &::before {
+      background-image: url('../../img/recording-new.png');
+    }
   }
 
   .recordings__open::before {
@@ -35,6 +38,10 @@
       height: 30px;
       padding-left: 33px;
       padding-top: 6px;
+      max-width: 260px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
 }
