@@ -1,39 +1,41 @@
 'use strict';
 
 var gulp = require('gulp'),
-    less = require('gulp-less'),
-    plumber = require('gulp-plumber'),
-    postcss = require('gulp-postcss'),
-    autoprefixer = require('autoprefixer'),
-    concat = require('gulp-concat'),
-    runSequence = require('run-sequence'),
-    connect = require('gulp-connect'),
-    rename = require("gulp-rename"),
-    minify = require("gulp-clean-css"),
-    uglify = require('gulp-uglify'),
-    imagemin = require('gulp-imagemin'),
-    webpack = require('webpack-stream'),
-    clean = require('gulp-clean');
+  less = require('gulp-less'),
+  plumber = require('gulp-plumber'),
+  postcss = require('gulp-postcss'),
+  autoprefixer = require('autoprefixer'),
+  //concat = require('gulp-concat'),
+  runSequence = require('run-sequence'),
+  connect = require('gulp-connect'),
+  rename = require('gulp-rename'),
+  minify = require('gulp-clean-css'),
+  uglify = require('gulp-uglify'),
+  imagemin = require('gulp-imagemin'),
+  webpack = require('webpack-stream'),
+  clean = require('gulp-clean');
 
+/*
 var jsLibs = [
-  /*'./bower_components/moment/min/moment-with-locales.min.js',
+  './bower_components/moment/min/moment-with-locales.min.js',
   './bower_components/tap/dist/tap.min.js',
-  './bower_components/mustache.js/mustache.min.js',*/
+  './bower_components/mustache.js/mustache.min.js',
   './source/js/modules/*.js',
   './source/js/main.js'
 ];
+*/
 
 //clean build
-gulp.task('clean', function () {
+gulp.task('clean', function() {
   return gulp.src('./build/*', {read: false})
     .pipe(clean());
 });
 
 //copy files to build
-gulp.task('copy', function () {
+gulp.task('copy', function() {
   gulp.src(['./source/img/*.svg', './source/img/*.ico'])
     .pipe(gulp.dest('./build/img/'));
-  gulp.src('./source/*.html')
+  gulp.src(['./source/*.html', './source/*.json'])
     .pipe(gulp.dest('./build/'));
   gulp.src('./source/font/*')
     .pipe(gulp.dest('./build/font'));
@@ -42,17 +44,17 @@ gulp.task('copy', function () {
 // web server
 gulp.task('connect', function() {
   connect.server({
-    root:'./build/',
+    root: './build/',
     livereload: true,
     port: 8080
   });
 });
 
 // reload html page on change
-gulp.task('html', function () {
+gulp.task('html', function() {
   gulp.src('./source/*.html')
     .pipe(gulp.dest('./build/'));
- gulp.src('./build/*.html')
+  gulp.src('./build/*.html')
     .pipe(connect.reload());
 });
 
@@ -66,7 +68,7 @@ gulp.task('style', function() {
     ]))
     .pipe(gulp.dest('./build/css'))
     .pipe(minify())
-    .pipe(rename("style.min.css"))
+    .pipe(rename('style.min.css'))
     .pipe(gulp.dest('./build/css'))
     .pipe(connect.reload());
 });
@@ -86,7 +88,7 @@ gulp.task('scripts', function() {
 gulp.task('images', function() {
   gulp.src('source/img/*')
     .pipe(imagemin())
-    .pipe(gulp.dest('build/img'))
+    .pipe(gulp.dest('build/img'));
 });
 
 // watch
