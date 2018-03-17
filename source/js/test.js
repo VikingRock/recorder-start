@@ -5,7 +5,7 @@ var privateVariable = 42;
 
 my.moduleProperty = 1;
 
-my.moduleMethod = function () {
+my.moduleMethod = function() {
   return privateVariable;
 };
 

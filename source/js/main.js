@@ -1,4 +1,4 @@
 'use strict';
 
-require('test');
+//require('test');
 require('use-test');

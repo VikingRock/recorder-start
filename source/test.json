@@ -1,57 +1,32 @@
 {
-  "colors": [
+  "recordings": [
     {
-      "color": "black",
-      "category": "hue",
-      "type": "primary",
-      "code": {
-        "rgba": [255,255,255,1],
-        "hex": "#000"
-      }
+      "name": "Lorem Ipsum",
+      "path": "lorem-ipsum.rpae"
     },
     {
-      "color": "white",
-      "category": "value",
-      "code": {
-        "rgba": [0,0,0,1],
-        "hex": "#FFF"
-      }
+      "name": "Dolor sit amet",
+      "path": "dolor/dolor.rpae"
     },
     {
-      "color": "red",
-      "category": "hue",
-      "type": "primary",
-      "code": {
-        "rgba": [255,0,0,1],
-        "hex": "#FF0"
-      }
+      "name": "Import Payments",
+      "path": "dolor/import.rpae"
     },
     {
-      "color": "blue",
-      "category": "hue",
-      "type": "primary",
-      "code": {
-        "rgba": [0,0,255,1],
-        "hex": "#00F"
-      }
+      "name": "Account Opening",
+      "path": "account.rpae"
     },
     {
-      "color": "yellow",
-      "category": "hue",
-      "type": "primary",
-      "code": {
-        "rgba": [255,255,0,1],
-        "hex": "#FF0"
-      }
+      "name": "Anti Money Laundering",
+      "path": "anti/money.rpae"
     },
     {
-      "color": "green",
-      "category": "hue",
-      "type": "secondary",
-      "code": {
-        "rgba": [0,255,0,1],
-        "hex": "#0F0"
-      }
+      "name": "KYC",
+      "path": "kyc/kyc.rpae"
+    },
+    {
+      "name": "Very very Long name - the last last variant final 2018",
+      "path": "long/name.rpae"
     }
   ]
 }
