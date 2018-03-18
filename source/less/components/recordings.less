@@ -4,15 +4,19 @@
   justify-content: space-between;
   flex-direction: column;
 
-  .icon::before {
-    display: inline-block;
-    vertical-align: middle;
-    content: "";
-    width: 30px;
-    height: 30px;
-    margin-right: 5px;
-    background-size: 30px;
-    background-repeat: no-repeat;
+  .icon {
+    cursor: pointer;
+
+    &::before {
+      display: inline-block;
+      vertical-align: middle;
+      content: "";
+      width: 30px;
+      height: 30px;
+      margin-right: 5px;
+      background-size: 30px;
+      background-repeat: no-repeat;
+    }
   }
 
   .recordings__new {
@@ -42,6 +46,18 @@
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+    }
+
+    a {
+      text-decoration: none;
+      color: @text-color;
+    }
+
+    .info-block {
+      background-color: @bg-color-yellow;
+      border-radius: 6px;
+      padding: 10px;
+      color: @bg-color-yellow--darker;
     }
   }
 }

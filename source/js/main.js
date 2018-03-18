@@ -1,4 +1,4 @@
 'use strict';
 
-//require('test');
-require('use-test');
+require('events');
+require('get-data');

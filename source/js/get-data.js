@@ -1,9 +1,10 @@
 'use strict';
 
-//var Test = require('test');
 var TIMEOUT = 10000;
+var recentList = document.querySelector('.recordings__list');
+var infoItem = recentList.querySelector('p');
 
-function getReviews() {
+function getRecordings() {
   var xhr = new XMLHttpRequest();
   xhr.open('GET', 'test.json');
   xhr.setRequestHeader('Content-Type', 'application/javascript');
@@ -14,29 +15,35 @@ function getReviews() {
 
     try {
       var recent = JSON.parse(stringData);
+
       recent.recordings.forEach(function(rec) {
-        renderRecent(rec);
+        renderRecent(rec, recentList);
       });
+      infoItem.classList.add('invisible');
+
     } catch (e) {
-      console.log('wrong JSON format');
+      if(stringData === '') {
+        showInfo('No recent recordings found');
+      } else {
+        showInfo('Error while getting recordings');
+      }
     }
   };
 
   xhr.onloadstart = function() {
-    console.log('load started');
+    showInfo('load started');
   };
 
-  xhr.ontimeout = addError;
-  xhr.onerror = addError;
-
-  function addError() {
-    console.log('connection error');
-  }
-
+  xhr.ontimeout = showInfo('Connection error');
+  xhr.onerror = showInfo('Connection error');
   xhr.send();
 }
 
-function renderRecent(content) {
+function showInfo(text) {
+  infoItem.innerText = text;
+}
+
+function renderRecent(content, list) {
   var recordingTemplate = document.getElementById('recent-template');
   var element = {};
 
@@ -49,8 +56,7 @@ function renderRecent(content) {
   element.querySelector('a').textContent = content.name;
   element.querySelector('a').setAttribute('href', content.path);
 
-  var recentList = document.querySelector('.recordings__list');
-  recentList.appendChild(element);
+  list.appendChild(element);
 }
 
-getReviews();
+getRecordings();
