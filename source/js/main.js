@@ -1,4 +1,4 @@
 'use strict';
 
-require('events');
+require('click-events');
 require('get-data');
