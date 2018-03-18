@@ -3,10 +3,11 @@
 var TIMEOUT = 10000;
 var recentList = document.querySelector('.recordings__list');
 var infoItem = recentList.querySelector('p');
+var dataJsonUrl = 'http://localhost:8080/test.json';
 
 function getRecordings() {
   var xhr = new XMLHttpRequest();
-  xhr.open('GET', 'test.json');
+  xhr.open('GET', dataJsonUrl);
   xhr.setRequestHeader('Content-Type', 'application/javascript');
   xhr.timeout = TIMEOUT;
 
