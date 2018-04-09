@@ -13,17 +13,8 @@ var gulp = require('gulp'),
   uglify = require('gulp-uglify'),
   imagemin = require('gulp-imagemin'),
   webpack = require('webpack-stream'),
+  // gnf = require('gulp-npm-files'),
   clean = require('gulp-clean');
-
-/*
-var jsLibs = [
-  './bower_components/moment/min/moment-with-locales.min.js',
-  './bower_components/tap/dist/tap.min.js',
-  './bower_components/mustache.js/mustache.min.js',
-  './source/js/modules/*.js',
-  './source/js/main.js'
-];
-*/
 
 //clean build
 gulp.task('clean', function() {
@@ -33,12 +24,14 @@ gulp.task('clean', function() {
 
 //copy files to build
 gulp.task('copy', function() {
-  gulp.src(['./source/img/*.svg', './source/img/*.ico'])
+  gulp.src(['./source/img/*.svg', './source/img/*.ico', './node_modules/lightslider/dist/img/*.png'])
     .pipe(gulp.dest('./build/img/'));
   gulp.src(['./source/*.html', './source/*.json'])
     .pipe(gulp.dest('./build/'));
-  gulp.src('./source/font/*')
-    .pipe(gulp.dest('./build/font'));
+  gulp.src(['./node_modules/lightslider/dist/js/*min.js', './node_modules/jquery/dist/*min.js'])
+    .pipe(gulp.dest('./build/js/libs'));
+  gulp.src('./node_modules/lightslider/dist/css/*min.css')
+    .pipe(gulp.dest('./build/css'));
 });
 
 // web server
