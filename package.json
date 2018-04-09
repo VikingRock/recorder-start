@@ -11,7 +11,8 @@
   "homepage": "https://github.com/VikingRock/CV",
   "dependencies": {
     "jquery": "^3.3.1",
-    "lightslider": "^1.1.6"
+    "lightslider": "^1.1.6",
+    "slick-carousel": "^1.8.1"
   },
   "scripts": {
     "test": "gulp lint",
