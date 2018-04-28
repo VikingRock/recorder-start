@@ -9,7 +9,7 @@ $(document).ready(function() {
 
     addClass: '',
     mode: 'slide',
-    useCSS: true,
+    useCSS: false,
     cssEasing: 'ease', //'cubic-bezier(0.25, 0, 0.25, 1)',//
     easing: 'linear', //'for jquery animation',////
 
