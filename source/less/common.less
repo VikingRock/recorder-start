@@ -5,11 +5,31 @@ html {
 }
 
 body {
-  min-width: 1365px;
+  min-width: 760px;
 }
 
 *, *:before, *:after {
   box-sizing: inherit;
+}
+
+.clickable-text {
+  cursor: pointer;
+  color: black;
+  user-select: none;
+  transition: color .2s;
+
+  &:hover {
+    color: @text-color-clickable;
+  }
+}
+
+.link {
+  color: @text-color-clickable;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .page-container {
@@ -17,7 +37,26 @@ body {
   flex-direction: row;
 }
 
-h2.section {
+.icon {
+  cursor: pointer;
+  width: 14px;
+  height: 14px;
+  margin-right: 5px;
+  background-size: 14px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.icon--big {
+  margin-right: 10px;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+
   color: @color--h2;
   font-size: @font-size--h2;
   font-weight: @font-weight;
@@ -34,20 +73,8 @@ h2.section {
     background-repeat: no-repeat;
   }
 
-  &.section--video::before {
-    background-image: url('../img/video@2x.png');
-  }
-
-  &.section--examples::before {
-    background-image: url('../img/examples@2x.png');
-  }
-
   &.section--news::before {
     background-image: url('../img/section-news.png');
-  }
-
-  &.section--help::before {
-    background-image: url('../img/need-help@2x.png');
   }
 }
 

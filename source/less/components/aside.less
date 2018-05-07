@@ -1,20 +1,26 @@
+.icon-help {
+  background-image: url('../img/need-help@2x.png');
+  width: 22px;
+  height: 22px;
+  background-size: 22px;
+}
+
 .help-n-news {
-  flex-basis: 32%;
-  padding: 25px 30px;
-  background-color: @color--eclipse;
+  margin: 0 40px 0 20px;
+  width: 230px;
+  flex-shrink: 0;
 
-  .help-links ul {
-    list-style: none;
-    padding-left: 0;
-
-    li {
-      line-height: 1.8;
-      font-weight: bold;
-    }
+  .help-links {
+    background-color: #EFF2FB;
+    height: 140px;
+    padding: 30px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     a {
       text-decoration: none;
-      color:  @text-color;
     }
   }
 }

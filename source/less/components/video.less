@@ -1,0 +1,129 @@
+.icon-video {
+  background-image: url('../img/video@2x.png');
+  width: 24px;
+  height: 17.5px;
+  background-size: 24px;
+}
+
+.icon-examples {
+  background-image: url('../img/examples@2x.png');
+  width: 24px;
+  height: 24px;
+  background-size: 24px;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  height: 120px;
+}
+
+.carousel__slider-wrapper {
+  overflow: hidden;
+  flex-grow: 1;
+}
+
+.carousel__slider {
+  display: flex;
+  transition: transform .5s;
+  will-change: transform;
+}
+
+.carousel-item {
+  font-size: 13px;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.carousel-item__media-wrapper {
+  position: relative;
+}
+
+.carousel-item__media-wrapper::before {
+  content: '';
+  position: absolute;
+  height: 80px;
+  width: 150px;
+  opacity: 0;
+  background-color: #000000;
+  transition: opacity .2s;
+}
+
+.carousel-item:hover .carousel-item__media-wrapper::before {
+  opacity: 0.2;
+}
+
+.carousel-item__media-wrapper::after {
+  content: '';
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  background-size: 32px;
+  background-repeat: no-repeat;
+  position: absolute;
+  background-image: url('../img/play@2x.png');
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity .4s;
+}
+
+.carousel-item:hover .carousel-item__media-wrapper::after {
+  opacity: 1;
+}
+
+.carousel-item__media {
+  height: 80px;
+  width: 150px;
+  border: 1px solid #B6BCCC;
+}
+
+.carousel-item__description {
+  margin-top: 13px;
+}
+
+.carousel__nav {
+  cursor: pointer;
+  flex-shrink: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: #B6BCCC;
+  position: relative;
+  width: 25px;
+
+  &:hover {
+    color: darken(#B6BCCC, 35%);
+  }
+
+  &--disabled {
+    pointer-events: none;
+    cursor: default;
+    opacity: .2;
+  }
+}
+
+.carousel__nav-icon {
+  width: 24px;
+  height: 24px;
+  transform: rotate(45deg);
+  transition: color .3s;
+}
+
+.carousel__nav-icon-prev {
+  border-left: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+
+  position: absolute;
+  left: 6px;
+  top: 31px;
+}
+
+.carousel__nav-icon-next {
+  border-right: 2px solid currentColor;
+  border-top: 2px solid currentColor;
+
+  position: absolute;
+  top: 31px;
+}

@@ -1,37 +1,56 @@
 .recordings {
-  flex-basis: 30%;
+  width: 200px;
+  padding-right: 20px;
+  border-right: 1px solid #B6BCCC;
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
+  flex-shrink: 0;
+}
 
-  .icon {
-    cursor: pointer;
+.icon-new {
+  background-image: url('../../img/new_recording@2x.png');
+}
 
-    &::before {
-      display: inline-block;
-      vertical-align: middle;
-      content: "";
-      width: 30px;
-      height: 30px;
-      margin-right: 5px;
-      background-size: 30px;
-      background-repeat: no-repeat;
-    }
-  }
+.icon-open {
+  background-image: url('../../img/open@2x.png');
+}
 
-  .recordings__new {
-    padding-bottom: 20px;
+.icon-recorder {
+  background-image: url('../../img/recorder@2x.png');
+}
 
-    &::before {
-      background-image: url('../../img/new_recording@2x.png');
-    }
-  }
+.recordings__item {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
 
-  .recordings__open::before {
-    background-image: url('../../img/open@2x.png');
-  }
+.do-not-show {
+  margin-top: auto;
+  font-size: 12px;
+  color: #828CA7;
+  user-select: none;
+}
 
-  .recordings__list {
+.do-not-show-checkbox {
+  margin-right: 3px;
+}
+
+.recordings__recent {
+  margin-bottom: 20px;
+}
+
+.recordings__recent-item {
+  margin-bottom: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+
+/*  .recordings__list {
     list-style-type: none;
     padding: 0 0 20px 0;
 
@@ -59,5 +78,5 @@
       padding: 10px;
       color: @bg-color-yellow--darker;
     }
-  }
-}
+  }*/
+/*}*/

@@ -11,116 +11,284 @@
   <title>Welcome</title>
 </head>
 <body>
-  <div class="page-container">
-
     <main class="page-main">
       <header class="page-header">
-        <h1>
           Welcome to <span class="product-name">WorkFusion Studio</span>
-        </h1>
       </header>
       <div class="content">
         <div class="recordings">
           <div class="recordings__wrapper">
-            <div class="recordings__new icon">New Recording</div>
+            <div class="recordings__item clickable-text">
+              <i class="icon icon-new"></i>
+              New Recording
+            </div>
             <div class="recordings__recent">
               <h2 class="section">
                 Recent
               </h2>
-              <ul class="recordings__list">
-                <p class="info-block">Loading recordings ...</p>
-              </ul>
+              <div class="recordings__list">
+                <div class="recordings__recent-item clickable-text">
+                  <i class="icon icon-recorder"></i>
+                  1
+                </div>
+                <div class="recordings__recent-item clickable-text">
+                  <i class="icon icon-recorder"></i>
+                  2
+                </div>
+                <div class="recordings__recent-item clickable-text">
+                  <i class="icon icon-recorder"></i>
+                  3
+                </div>
+                <div class="recordings__recent-item clickable-text">
+                  <i class="icon icon-recorder"></i>
+                  4
+                </div>
+              </div>
             </div>
-            <div class="recordings__open icon">Open...</div>
+
+            <div class="recordings__item clickable-text">
+              <i class="icon icon-open"></i>
+              Open...
+            </div>
           </div>
 
           <div class="do-not-show">
-            <input type="checkbox" id="show" checked>
+            <input class="do-not-show-checkbox" type="checkbox" id="show" checked>
             <label for="show">Show this window on launch</label>
           </div>
         </div>
+
         <div class="examples">
           <div class="examples__videos">
-            <h2 class="section section--icon section--video">
+            <div class="section">
+              <i class="icon icon--big icon-video"></i>
               Video Tutorials
-            </h2>
-            <ul id="lightSlider">
-              <li>
-                  <img src="img/How to use the recorder@2x.png" alt="">
-                  <h3>How to use recorder</h3>
-              </li>
-              <li>
-                  <img src="img/Overview and installation@2x.png" alt="">
-                  <h3>Overview and Installation</h3>
-              </li>
-              <li>
-                  <img src="img/Cycles in recorder@2x.png" alt="">
-                  <h3>Cycles in Recorder</h3>
-              </li>
-              <li>
-                  <img src="img/Delays and timeouts@2x.png" alt="">
-                  <h3>Delays and timeouts</h3>
-              </li>
-              <li>
-                  <img src="img/Editing images@2x.png" alt="">
-                  <h3>Editing images</h3>
-              </li>
-
-            </ul>
+            </div>
+            <div class="carousel">
+              <div class="carousel__nav carousel__prev carousel__nav--disabled" id="prev">
+                <div class="carousel__nav-icon carousel__nav-icon-prev"></div>
+              </div>
+              <div class="carousel__slider-wrapper">
+                <div class="carousel__slider" id="slider">
+                  <a
+                    href="https://www.youtube.com/"
+                    target="_blank"
+                    class="clickable-text carousel-item"
+                  >
+                    <div class="carousel-item__media-wrapper">
+                      <img class="carousel-item__media" src="img/How to use the recorder@2x.png" alt="">
+                    </div>
+                    <div class="carousel-item__description"v>How to use recorder</div>
+                  </a>
+                  <a
+                    href="https://www.youtube.com/"
+                    target="_blank"
+                    class="clickable-text carousel-item"
+                  >
+                    <div class="carousel-item__media-wrapper">
+                      <img class="carousel-item__media" src="img/Overview and installation@2x.png" alt="">
+                    </div>
+                    <div class="carousel-item__description">Overview and Installation</div>
+                  </a>
+                  <a
+                    href="https://www.youtube.com/"
+                    target="_blank"
+                    class="clickable-text carousel-item"
+                  >
+                    <div class="carousel-item__media-wrapper">
+                      <img class="carousel-item__media" src="img/Cycles in recorder@2x.png" alt="">
+                    </div>
+                    <div class="carousel-item__description">Cycles in Recorder</div>
+                  </a>
+                  <a
+                    href="https://www.youtube.com/"
+                    target="_blank"
+                    class="clickable-text carousel-item"
+                  >
+                    <div class="carousel-item__media-wrapper">
+                      <img class="carousel-item__media" src="img/Delays and timeouts@2x.png" alt="">
+                    </div>
+                    <div class="carousel-item__description">Delays and timeouts</div>
+                  </a>
+                  <a
+                    href="https://www.youtube.com/"
+                    target="_blank"
+                    class="clickable-text carousel-item"
+                  >
+                    <div class="carousel-item__media-wrapper">
+                      <img class="carousel-item__media" src="img/Editing images@2x.png" alt="">
+                    </div>
+                    <div class="carousel-item__description">Editing images</div>
+                  </a>
+                  <a
+                    href="https://www.youtube.com/"
+                    target="_blank"
+                    class="clickable-text carousel-item"
+                  >
+                    <div class="carousel-item__media-wrapper">
+                      <img class="carousel-item__media" src="img/How to use the recorder@2x.png" alt="">
+                    </div>
+                    <div class="carousel-item__description"v>How to use recorder</div>
+                  </a>
+                  <a
+                    href="https://www.youtube.com/"
+                    target="_blank"
+                    class="clickable-text carousel-item"
+                  >
+                    <div class="carousel-item__media-wrapper">
+                      <img class="carousel-item__media" src="img/Overview and installation@2x.png" alt="">
+                    </div>
+                    <div class="carousel-item__description">Overview and Installation</div>
+                  </a>
+                  <a
+                    href="https://www.youtube.com/"
+                    target="_blank"
+                    class="clickable-text carousel-item"
+                  >
+                    <div class="carousel-item__media-wrapper">
+                      <img class="carousel-item__media" src="img/Cycles in recorder@2x.png" alt="">
+                    </div>
+                    <div class="carousel-item__description">Cycles in Recorder</div>
+                  </a>
+                  <a
+                    href="https://www.youtube.com/"
+                    target="_blank"
+                    class="clickable-text carousel-item"
+                  >
+                    <div class="carousel-item__media-wrapper">
+                      <img class="carousel-item__media" src="img/Delays and timeouts@2x.png" alt="">
+                    </div>
+                    <div class="carousel-item__description">Delays and timeouts</div>
+                  </a>
+                  <a
+                    href="https://www.youtube.com/"
+                    target="_blank"
+                    class="clickable-text carousel-item"
+                  >
+                    <div class="carousel-item__media-wrapper">
+                      <img class="carousel-item__media" src="img/Editing images@2x.png" alt="">
+                    </div>
+                    <div class="carousel-item__description">Editing images</div>
+                  </a>
+                </div>
+              </div>
+              <div class="carousel__nav carousel__next" id="next">
+                <div class="carousel__nav-icon carousel__nav-icon-next" ></div>
+              </div>
+            </div>
           </div>
+
           <div class="examples__code">
-            <h2 class="section  section--icon section--examples">
-              Examples
-            </h2>
-            <table class="examples__table">
-              <tbody>
-              <tr>
-                <td>Hello World</td>
-                <td>Opens Notepad, types some text there and saves to a temp folder</td>
-              </tr>
-              <tr>
-                <td>Fill company websites in Bing</td>
-                <td>Search company name using Bing and save results to Excel</td>
-              </tr>
-              <tr>
-                <td>MS Office 2010 World Markets</td>
-                <td>Create MS Excel 2010 sheet with Google world markets</td>
-              </tr>
-              <tr>
-                <td>MS Office 2013 World Markets</td>
-                <td>Create MS Excel 2013 sheet with Google world markets</td>
-              </tr>
-              <tr>
-                <td>Outlook send simple email</td>
-                <td>Use Outlook 2010 to send an email</td>
-              </tr>
-              <tr>
-                <td>MS Paint automation</td>
-                <td>Opens weather forecast, make screenshot, pastes it to Paint application and draws arrow pointing to current place</td>
-              </tr>
-              </tbody>
-            </table>
+            <div>
+              <div class="section">
+                <i class="icon icon--big icon-examples"></i>
+                Examples
+              </div>
+              <div class="examples__table">
+                <a
+                  class="example-item"
+                  href="https://www.youtube.com"
+                  target="_blank"
+                />
+                  <div class="example-icon"><i class="icon icon-1"></i></div>
+                  <div class="example-title">Hello World</div>
+                  <div class="example-description">Bot creates multiple text files, types their content, and saves them.</div>
+                </a>
+                <a
+                 class="example-item"
+                 href="https://www.youtube.com"
+                 target="_blank"
+                />
+                  <div class="example-icon"><i class="icon icon-2"></i></div>
+                  <div class="example-title">Dates translation</div>
+                  <div class="example-description">Bot uses Google Translate to translate the day into another language. Afterwards, bot converts a date to different locales and outputs then into Notepad.</div>
+                </a>
+                <a
+                 class="example-item"
+                 href="https://www.youtube.com"
+                 target="_blank"
+                />
+                  <div class="example-icon"><i class="icon icon-3"></i></div>
+                  <div class="example-title">Typing using variables</div>
+                  <div class="example-description">Bot opens Notepad, modifies its font settings, gets current system time, makes date and number conversions, and outputs variable values into Notepad.</div>
+                </a>
+                <a
+                 class="example-item"
+                 href="https://www.youtube.com"
+                 target="_blank"
+                />
+                  <div class="example-icon"><i class="icon icon-4"></i></div>
+                  <div class="example-title">Automating Salesforce</div>
+                  <div class="example-description">
+                    Bot digitizes your business cards by using OCR and enters the data into a Salesforce account.
+                    <object>
+                      <a class="link" href="http://learn.workfusion.com/2018-03-automation-challenge-business-card-crunch">Details</a>
+                    </object>
+                  </div>
+                </a>
+                <a
+                 class="example-item"
+                 href="https://www.youtube.com"
+                 target="_blank"
+                />
+                  <div class="example-icon"><i class="icon icon-5"></i></div>
+                  <div class="example-title">Tic-Tac-Toe using conditions</div>
+                  <div class="example-description">
+                    Tic Tac Toe using an RPA Express bot. Simple solution using multiple conditions.
+                    <object>
+                      <a class="link" href="http://learn.workfusion.com/2018-march-automation-challenge-tic-tac-toe">Details</a>
+                    </object>
+                  </div>
+                </a>
+                <a
+                 class="example-item"
+                 href="https://www.youtube.com"
+                 target="_blank"
+                />
+                  <div class="example-icon"><i class="icon icon-6"></i></div>
+                  <div class="example-title">Tic-Tac-Toe using Excel</div>
+                  <div class="example-description">
+                    Tic Tac Toe using an RPA Express bot. Complex solution using Excel with regular expressions.
+                    <object>
+                      <a class="link" href="http://learn.workfusion.com/2018-march-automation-challenge-tic-tac-toe">Details</a>
+                    </object>
+                  </div>
+                </a>
+                <a
+                 class="example-item"
+                 href="https://www.youtube.com"
+                 target="_blank"
+                />
+                  <div class="example-icon"><i class="icon icon-7"></i></div>
+                  <div class="example-title">Web table scraping</div>
+                  <div class="example-description">Bot opens a website page containing a table and saves it to a Table variable. This table is then copied to an Excel spreadsheet.</div>
+                </a>
+                <a
+                 class="example-item"
+                 href="https://www.youtube.com"
+                 target="_blank"
+                />
+                  <div class="example-icon"><i class="icon icon-8"></i></div>
+                  <div class="example-title">Capture screenshot and draw</div>
+                  <div class="example-description">Bot opens a weather forecast website, makes screenshot, pastes it to Paint application and draws arrow pointing to current place.</div>
+                </a>
+              </div>
+            </div>
+            <div class="help-n-news">
+              <div class="section">
+                <i class="icon icon-help icon--big"></i>
+                Need Help?
+              </div>
+              <div class="help-links">
+                <div><a class="clickable-text" href="https://forum.workfusion.com">Community Forum</a></div>
+                <div><a class="clickable-text" href="https://automationacademy.com">Automation Academy</a></div>
+                <div><a class="clickable-text" href="https://kb.workfusion.com/display/RPAe">Knowledge Base</a></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </main>
-
-    <div class="help-n-news">
-      <div class="help-links">
-        <h2 class="section  section--icon section--help">
-          Need Help?
-        </h2>
-        <ul>
-          <li><a href="https://forum.workfusion.com">Community Forum</a></li>
-          <li><a href="https://automationacademy.com">Automation Academy</a></li>
-          <li><a href="https://kb.workfusion.com/display/RPAe">Knowledge Base</a></li>
-        </ul>
-        <hr>
-      </div>
-
-    </div>
-
-  </div>
 
   <template id="recent-template">
     <li><a href=""></a></li>
