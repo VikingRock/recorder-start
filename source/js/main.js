@@ -9,12 +9,16 @@ var slideHorizontalMargin = 10
 var totalSlideWidth = slideMediaWidth + 2 * slideHorizontalMargin
 var currentLeftVisibleSlideIndex = 0
 var totalSlides = slider.childElementCount
-var numbeOfSlidesFitsOnScreen = Math.floor((slider.clientWidth + slideHorizontalMargin) / totalSlideWidth)
+var numbeOfSlidesFitsOnScreen = calculateNumberOfSlidesFitsOnScreen()
 var disabledClass = 'carousel__nav--disabled'
 
 next.addEventListener('click', showNext)
 prev.addEventListener('click', showPrev)
 window.addEventListener('resize', onResize)
+
+function calculateNumberOfSlidesFitsOnScreen () {
+    return Math.floor((slider.clientWidth + slideHorizontalMargin) / totalSlideWidth)
+}
 
 function showNext () {
   currentLeftVisibleSlideIndex++
@@ -24,9 +28,7 @@ function showNext () {
     prev.classList.remove(disabledClass)
   }
 
-  if (currentLeftVisibleSlideIndex + numbeOfSlidesFitsOnScreen >= totalSlides) {
-    next.classList.add(disabledClass)
-  }
+  disableNextNavIfNeeded()
 }
 
 function showPrev () {
@@ -37,8 +39,18 @@ function showPrev () {
     prev.classList.add(disabledClass)
   }
 
+  disablePrevNavIfNeeded()
+}
+
+function disablePrevNavIfNeeded () {
   if (currentLeftVisibleSlideIndex + numbeOfSlidesFitsOnScreen < totalSlides) {
     next.classList.remove(disabledClass)
+  }
+}
+
+function disableNextNavIfNeeded () {
+  if (currentLeftVisibleSlideIndex + numbeOfSlidesFitsOnScreen >= totalSlides) {
+    next.classList.add(disabledClass)
   }
 }
 
@@ -51,9 +63,7 @@ function getCurrentOffset () {
 }
 
 function onResize () {
-  numbeOfSlidesFitsOnScreen = Math.floor(slider.clientWidth / totalSlideWidth)
+  numbeOfSlidesFitsOnScreen = calculateNumberOfSlidesFitsOnScreen()
+  disableNextNavIfNeeded()
+  disablePrevNavIfNeeded()
 }
-
-// require('click-events');
-// require('get-data');
-// require('slider');
