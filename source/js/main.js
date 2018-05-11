@@ -28,9 +28,7 @@ function showNext () {
     prev.classList.remove(disabledClass)
   }
 
-  if (currentLeftVisibleSlideIndex + numbeOfSlidesFitsOnScreen >= totalSlides) {
-    next.classList.add(disabledClass)
-  }
+  disableNextNavIfNeeded()
 }
 
 function showPrev () {
@@ -41,8 +39,18 @@ function showPrev () {
     prev.classList.add(disabledClass)
   }
 
+  disablePrevNavIfNeeded()
+}
+
+function disablePrevNavIfNeeded () {
   if (currentLeftVisibleSlideIndex + numbeOfSlidesFitsOnScreen < totalSlides) {
     next.classList.remove(disabledClass)
+  }
+}
+
+function disableNextNavIfNeeded () {
+  if (currentLeftVisibleSlideIndex + numbeOfSlidesFitsOnScreen >= totalSlides) {
+    next.classList.add(disabledClass)
   }
 }
 
@@ -56,4 +64,6 @@ function getCurrentOffset () {
 
 function onResize () {
   numbeOfSlidesFitsOnScreen = calculateNumberOfSlidesFitsOnScreen()
+  disableNextNavIfNeeded()
+  disablePrevNavIfNeeded()
 }
