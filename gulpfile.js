@@ -24,14 +24,10 @@ gulp.task('clean', function() {
 
 //copy files to build
 gulp.task('copy', function() {
-  gulp.src(['./source/img/*.svg', './source/img/*.ico', './node_modules/lightslider/dist/img/*.png'])
+  gulp.src(['./source/img/*.svg', './source/img/*.ico'])
     .pipe(gulp.dest('./build/img/'));
-  gulp.src(['./source/*.html', './source/*.json'])
+  gulp.src('./source/*.html')
     .pipe(gulp.dest('./build/'));
-  gulp.src(['./node_modules/lightslider/dist/js/*min.js', './node_modules/jquery/dist/*min.js'])
-    .pipe(gulp.dest('./build/js/libs'));
-  gulp.src('./node_modules/lightslider/dist/css/*min.css')
-    .pipe(gulp.dest('./build/css'));
 });
 
 // web server
