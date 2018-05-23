@@ -27,7 +27,7 @@
   }
 }
 
-.example-icon {
+.example-icon-container {
   padding: 7px;
   flex-shrink: 0;
 }
@@ -74,65 +74,50 @@
     padding: 0 7px 10px;
   }
 
-  .example-icon {
+  .example-icon-container {
     display: none;
   }
 }
 
-.icon-1 {
-  background-image: url('../../img/1@2x.png');
+.example-icon {
+  transition: opacity .2s;
+  opacity: .3;
   width: 16px;
   height: 16px;
   background-size: 16px;
+
+}
+
+.icon-1 {
+  background-image: url('../../img/1-active@2x.png');
 }
 
 .icon-2 {
-  background-image: url('../../img/2@2x.png');
-  width: 16px;
-  height: 17px;
-  background-size: 16px;
+  background-image: url('../../img/2-active@2x.png');
 }
 
 .icon-3 {
-  background-image: url('../../img/3@2x.png');
-  width: 16px;
-  height: 16px;
-  background-size: 16px;
+  background-image: url('../../img/3-active@2x.png');
 }
 
 .icon-4 {
-  background-image: url('../../img/4@2x.png');
-  width: 16px;
-  height: 16px;
-  background-size: 16px;
+  background-image: url('../../img/4-active@2x.png');
 }
 
 .icon-5 {
-  background-image: url('../../img/5@2x.png');
-  width: 16px;
-  height: 16px;
-  background-size: 16px;
+  background-image: url('../../img/5-active@2x.png');
 }
 
 .icon-6 {
-  background-image: url('../../img/6@2x.png');
-  width: 16px;
-  height: 16px;
-  background-size: 16px;
+  background-image: url('../../img/6-active@2x.png');
 }
 
 .icon-7 {
-  background-image: url('../../img/7@2x.png');
-  width: 16px;
-  height: 16px;
-  background-size: 16px;
+  background-image: url('../../img/7-active@2x.png');
 }
 
 .icon-8 {
-  background-image: url('../../img/8@2x.png');
-  width: 16px;
-  height: 16px;
-  background-size: 16px;
+  background-image: url('../../img/8-active@2x.png');
 }
 
 .example-item:hover {
@@ -140,28 +125,7 @@
     color: @text-color-clickable;
   }
 
-  .icon-1 {
-    background-image: url('../../img/1-active@2x.png');
-  }
-  .icon-2 {
-    background-image: url('../../img/2-active@2x.png');
-  }
-  .icon-3 {
-    background-image: url('../../img/3-active@2x.png');
-  }
-  .icon-4 {
-    background-image: url('../../img/4-active@2x.png');
-  }
-  .icon-5 {
-    background-image: url('../../img/5-active@2x.png');
-  }
-  .icon-6 {
-    background-image: url('../../img/6-active@2x.png');
-  }
-  .icon-7 {
-    background-image: url('../../img/7-active@2x.png');
-  }
-  .icon-8 {
-    background-image: url('../../img/8-active@2x.png');
+  .example-icon {
+    opacity: 1;
   }
 }

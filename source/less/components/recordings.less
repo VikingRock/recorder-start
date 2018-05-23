@@ -27,10 +27,17 @@
 }
 
 .do-not-show {
-  margin-top: auto;
+  position: fixed;
+  bottom: 20px;
   font-size: 12px;
   color: #828CA7;
   user-select: none;
+}
+
+@media screen and (max-height: 415px) {
+  .do-not-show {
+    position: static;
+  }
 }
 
 .do-not-show-checkbox {
@@ -54,4 +61,5 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  font-size: 13px;
 }
